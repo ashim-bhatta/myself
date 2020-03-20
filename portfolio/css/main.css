@@ -294,6 +294,11 @@ section,
         font-size: 50px;
         font-weight: 700;
     }
+    .content {
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+    }
 }
 
 
