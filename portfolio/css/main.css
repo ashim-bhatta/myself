@@ -2,34 +2,14 @@ body {
     font-family: 'PT Sans', sans-serif;
 }
 
-::-webkit-scrollbar {
-    width: 4px;
-}
-
-
-/* Track */
-
- ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-
-/* Handle */
-
- ::-webkit-scrollbar-thumb {
-    background: rgb(135, 5, 221);
-    border-radius: 10px;
-}
-
  ::selection {
-    background-color: #FF6584;
+    background-color: rgba(50, 219, 73, 0.4);
     color: white;
 }
 
 section,
 .project {
     padding: 30px;
-    overflow-y: scroll !important;
 }
 
 .home {
@@ -178,6 +158,9 @@ section,
         line-height: 35px;
         text-shadow: none
     }
+    section {
+        margin-bottom: 30px;
+    }
 }
 
 
@@ -190,7 +173,6 @@ section,
     background-position: center;
     color: white;
     position: relative;
-    /* background-image: linear-gradient(120deg, rgba(213, 252, 121, 0.494) 0%, rgba(150, 230, 161, 0.451) 100%); */
 }
 
 .project-grid {
@@ -312,4 +294,174 @@ section,
         font-size: 50px;
         font-weight: 700;
     }
+}
+
+
+/******section 5**/
+
+.contact {
+    background: linear-gradient(to top, rgba(88, 88, 90, 0.9) 0%, rgba(25, 26, 25, 0.9) 100%), url(../img/bg-5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    width: 100%;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+    text-align: left;
+}
+
+.contact-column {
+    height: 400px;
+    padding: 30px;
+    position: relative;
+}
+
+.bg-2,
+.bg-1 {
+    background: transparent;
+    /* box-shadow: 0.1px 0.1px 2px rgba(0, 0, 0, 0.733); */
+    transition: 600ms;
+}
+
+.bg-2:hover,
+.bg-1:hover {
+    border-radius: 10px;
+    box-shadow: 0.5px 2px 20px rgba(0, 0, 0, 0.733);
+}
+
+.contact-column h1 {
+    font-weight: 700;
+    font-size: 38px;
+}
+
+.contact-column p {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(173, 165, 165);
+}
+
+.contact-column summary {
+    font-size: 18px;
+    color: rgba(50, 219, 73, 0.6);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-column a {
+    width: 20px;
+    margin: 10px;
+    outline: none;
+}
+
+.contact-column img {
+    width: 20px;
+    margin: 10px;
+    outline: none;
+}
+
+.email,
+.num {
+    margin-bottom: 20px;
+}
+
+.email p,
+.num p {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+
+.contact-column span {
+    display: block;
+}
+
+.contact-column button {
+    padding: 5px 30px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 100px;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 20px;
+    z-index: 36538457983457893457893465348956384 !important;
+}
+
+@media (max-width: 900px) {
+    .contact-column {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+#for-project,
+#for-hire,
+#for-coffee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    display: none;
+}
+
+#close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: none;
+    cursor: pointer;
+    z-index: 23423986283462723756328745628346238564623846239846238;
+}
+
+
+/****form **/
+
+.form {
+    width: 100%;
+    padding: 30px;
+}
+
+.form h1 {
+    font-size: 26px;
+}
+
+.form h2 {
+    font-size: 16px;
+}
+
+.form input {
+    width: 250px;
+    height: 30px;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    color: rgb(224, 218, 218);
+    border: 1px solid white;
+    background: transparent;
+    padding: 2px 5px;
+}
+
+.form textarea {
+    width: 300px;
+    height: 100px;
+    resize: none;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    color: rgb(224, 218, 218);
+    border: 1px solid white;
+    background: transparent;
 }
