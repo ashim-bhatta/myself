@@ -11,7 +11,7 @@ var error = ''
 nxtBtn.addEventListener('click', e => {
     e.preventDefault()
     if (x === '') {
-        var error = 'Please choose one of the above'
+        alert('Please choose one of the options...')
     } else {
         option.style.display = 'none'
         close.style.display = 'flex'

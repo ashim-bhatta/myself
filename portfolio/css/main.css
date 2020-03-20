@@ -299,6 +299,14 @@ section,
         bottom: 20px;
         left: 10px;
     }
+    section::after {
+        content: 'Swipe -->';
+        padding: 5px 10px;
+        border: 1px solid white;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
 }
 
 
@@ -449,22 +457,22 @@ section,
 }
 
 .form input {
-    width: 250px;
-    height: 30px;
+    width: 200px;
+    height: 35px;
     display: block;
     margin-bottom: 10px;
     font-size: 12px;
     border: none;
     outline: none;
     color: rgb(224, 218, 218);
-    border: 1px solid white;
+    border: 1px solid #339141;
     background: transparent;
     padding: 2px 5px;
 }
 
 .form textarea {
-    width: 300px;
-    height: 100px;
+    width: 200px;
+    height: 110px;
     resize: none;
     display: block;
     margin-bottom: 10px;
@@ -472,6 +480,9 @@ section,
     border: none;
     outline: none;
     color: rgb(224, 218, 218);
-    border: 1px solid white;
+    border: 1px solid #339141;
     background: transparent;
 }
+
+
+/******/
