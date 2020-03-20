@@ -299,7 +299,7 @@ section,
         bottom: 20px;
         left: 10px;
     }
-    section::after {
+    .home::after {
         content: 'Swipe -->';
         padding: 5px 10px;
         border: 1px solid white;
