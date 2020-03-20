@@ -184,24 +184,23 @@ section,
 /*****section 4 ***/
 
 .project {
-    position: fixed;
     background: linear-gradient(to top, rgba(88, 88, 90, 0.9) 0%, rgba(25, 26, 25, 0.9) 100%), url(../img/bg-4.jpg);
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
     /* background-image: linear-gradient(120deg, rgba(213, 252, 121, 0.494) 0%, rgba(150, 230, 161, 0.451) 100%); */
 }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(1fr, 250px));
     grid-gap: 30px;
 }
 
 .project-column {
-    height: 150px;
-    background: white;
     position: relative;
     font-size: 13px;
     text-align: center;
@@ -210,6 +209,7 @@ section,
     box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.733);
     transition: 600ms;
     overflow: hidden;
+    transition: 600ms;
 }
 
 .project-column img {
@@ -224,6 +224,18 @@ section,
     color: #96e6a1;
 }
 
+.project-column:hover .empty {
+    transform: scale(1);
+}
+
+.project-column:hover .project-content {
+    transform: scale(1);
+}
+
+.project-column:hover .img-cover {
+    background-color: rgba(82, 80, 80, 0.9);
+}
+
 .empty {
     position: absolute;
     top: 0;
@@ -232,10 +244,20 @@ section,
     bottom: 0;
     border-radius: 10px;
     transition: 400ms;
-    transform: scaleX(1);
+    transform: scaleX(0);
     clip-path: polygon(0 17%, 58% 54%, 70% 100%, 0 100%);
-    background: rgba(66, 222, 201, 0.692);
+    background: linear-gradient(120deg, rgba(213, 252, 121, 0.5) 0%, rgba(50, 219, 73, 0.5) 100%);
     transform-origin: left;
+    z-index: 847834658;
+}
+
+.img-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(82, 80, 80, 0.4);
 }
 
 .project-content {
@@ -246,13 +268,44 @@ section,
     bottom: 0;
     border-radius: 10px;
     clip-path: polygon(0 0, 62% 78%, 57% 100%, 0 100%);
-    background: rgba(66, 222, 196, 0.6);
+    background: linear-gradient(120deg, rgba(213, 252, 121, 0.6) 0%, rgba(50, 219, 73, 0.6) 100%);
     color: white;
-    transform: scaleX(1);
+    transform: scaleX(0);
     transition: 400ms;
     transform-origin: right;
+    z-index: 345763457639485738457384573489653489;
 }
 
-.wrap {
-    height: auto;
+.content {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.project-content h3 {
+    font-size: 12px;
+    color: rgb(78, 75, 75);
+    font-weight: 700;
+    cursor: text;
+}
+
+.project-content a {
+    background: white;
+    width: 60px;
+    font-size: 12px;
+    color: rgb(78, 75, 75);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+}
+
+@media (max-width: 600px) {
+    .empty {
+        transform: scale(1);
+    }
+    .project-content {
+        transform: scale(1);
+    }
 }
