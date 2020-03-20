@@ -457,7 +457,7 @@ section,
 }
 
 .form input {
-    width: 200px;
+    width: calc(100% - 0px);
     height: 35px;
     display: block;
     margin-bottom: 10px;
@@ -471,7 +471,7 @@ section,
 }
 
 .form textarea {
-    width: 200px;
+    width: calc(100% - 0px);
     height: 110px;
     resize: none;
     display: block;
