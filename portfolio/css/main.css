@@ -417,6 +417,10 @@ section,
         grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
         text-align: center;
     }
+    #close {
+        top: 10px;
+        right: 10px;
+    }
 }
 
 #for-project,
